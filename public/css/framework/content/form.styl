@@ -1,0 +1,321 @@
+/*
+ * Forms
+ */
+
+form
+	width $baseFormWidth
+
+fieldset
+	padding-bottom $baseLineHeight
+	border-bottom 1px solid $baseBorderColor
+	margin-bottom $baseLineHeight
+
+.form-field
+	margin-bottom 18px
+label
+	display block
+	color $labelFontColor
+	margin-bottom 2px
+
+	span
+		display inline-block
+		width ($baseFormWidth * 0.3) - @margin-right /* ( 30% of form width ) - horizontal margin */
+		vertical-align middle
+		margin-right 20px
+		line-height 30px /* TODO - line-height must match input height to line up texarea span corrctly */
+
+		abbr /* Indicates required files */
+			color $errorColor
+			margin-left 6px
+			border 0
+
+input,
+select
+textarea
+	display inline-block
+	width ($baseFormWidth * 0.7) - 12 /* ( 70% of form width ) - horizontal margin, padding and border */
+	vertical-align middle
+	padding 5px
+	color $inputFontColor
+	border 1px solid $baseBorderColor
+	background-color $inputBackground
+	outline 0 /* Be sure to set a focus style if using this */
+
+	if $baseBorderRadius != 0
+		border-radius $baseBorderRadius
+	if $baseTransitionDuration != 0
+		transition border $baseTransitionDuration $baseTransitionEasing, box-shadow $baseTransitionDuration $baseTransitionEasing
+
+	&:hover
+		border-color darken($baseBorderColor, 10)
+	&:active,
+	&:focus
+		border-color $primaryColor
+		box-shadow 0px 1px 5px rgba(0,0,0,.2) inset, 0px 0px 5px rgba($primaryColor, 0.8)
+
+select
+	width ($baseFormWidth * 0.7) /* 70% of form width (margin, padding and border not needed in this calculation) */
+
+textarea
+	height 100px
+	vertical-align top
+	resize vertical
+	overflow auto /* Hides scrollber in IE when not needed*/
+
+fieldset.actions
+	display block
+	width $baseFormWidth
+	text-align right
+	input
+		margin-left 20px
+
+input.button
+	position relative
+	display inline-block
+	width auto
+	padding 5px 16px
+	font-weight bold
+	background-color $buttonColor
+	border 1px solid darken($buttonColor, 14)
+	outline 0 /* Be sure to set a focus style if using this */
+	cursor pointer
+	box-shadow none
+	if dark($buttonColor)
+		color #FFFFFF /* TODO - move to variable */
+	else
+		color #999999 /* TODO - move to variable */
+
+	if $baseBorderRadius != 0
+		border-radius $baseBorderRadius
+	if $baseTransitionDuration != 0
+		transition border $baseTransitionDuration $baseTransitionEasing, background-color $baseTransitionDuration $baseTransitionEasing
+
+	&:hover
+		background-color lighten($buttonColor, 3)
+	&:active,
+	&:focus
+		top 1px
+		background-color darken($buttonColor, 3)
+
+input.button.primary
+	text-shadow 0px 1px 1px darken($primaryColor, 6)
+	background-color $primaryColor
+	border 1px solid darken($primaryColor, 6)
+	box-shadow 0px 0px 0px 1px lighten($primaryColor, 5) inset
+	if dark($primaryColor)
+		color #FFFFFF /* TODO - move to variable */
+	else
+		color #333333 /* TODO - move to variable */
+	&:hover
+		background-color lighten($primaryColor, 3)
+	&:active,
+	&:focus
+		background-color darken($primaryColor, 3)
+
+/** Field Descriptions **/
+.form-field
+	.description
+		margin-left ($baseFormWidth * 0.3)
+		font-size 11px
+		color #999
+		p,ul,li
+			margin-bottom 0
+		&:hover
+			color #555
+
+/*
+ * Advanced Controls
+ */
+
+/** Datepicker **/
+input.datepicker
+	position relative
+	/*background url("/images/faramework/datepicker-sprite.png") 0 0 no-repeat*/
+
+#ui-datepicker-div
+	position absolute
+	left -9999px
+	background-color #FFF
+	padding 10px
+	margin-top 10px
+	border 1px solid darken($baseBorderColor, 10)
+	if $baseBorderRadius != 0
+		border-radius $baseBorderRadius
+	box-shadow 0px 2px 8px -4px rgba(0,0,0,.5)
+	&::before
+		content ""
+		position absolute
+		top -12px
+		left 10px
+		width 25px
+		height 12px
+		background url("/images/framework/datepicker-sprite.png") 0px -61px no-repeat
+
+	.ui-datepicker-title
+		padding-bottom 6px
+		border-bottom 1px solid $baseBorderColor
+		margin-bottom 5px
+		font-weight bold
+		color #333333 /* TODO - Set with variable? */
+
+	.ui-datepicker-next,
+	.ui-datepicker-prev
+		position absolute
+		top 14px
+		right 10px
+		display block
+		width 12px
+		height 12px
+		margin-left 5px
+		margin-bottom 0
+		overflow hidden
+		text-indent -9999px
+		background url("/images/content/button-sprite.png") -160px -94px no-repeat $primaryColor
+		&:hover
+			background-position -160px -110px
+	.ui-datepicker-prev
+		right 24px
+		background-position -144px -94px
+		&:hover
+			background-position -144px -110px
+
+	table
+		width auto
+		margin-bottom 0
+		margin-right 1px /* Rectifies border collapse causing a padding mismatch */
+	th,
+	td
+		padding 0
+	th
+		font-size 10px
+		text-transform uppercase
+		border none
+	td
+		border 1px solid $baseBorderColor
+		text-align center
+		a,
+		span
+			display block
+			width 30px
+			height 30px
+			line-height 30px
+			text-decoration none
+			font-weight bold
+			color #333333 /* TODO - convert to variable */
+		a
+			&:hover,
+			&:active,
+			&:focus
+				background-color $primaryColor
+				if dark($primaryColor)
+					color #FFFFFF
+				else
+					color #555555
+		span
+			cursor default
+
+	.ui-datepicker-today
+		a
+			font-weight bold
+			background-color #F7F7F7
+			box-shadow 0px 1px 4px rgba(0,0,0,.2) inset
+	.ui-datepicker-current-day
+		a,
+		span
+			background url("/images/framework/datepicker-sprite.png") 0 0 no-repeat $primaryColor
+			&:hover
+				background-image none
+	.ui-datepicker-other-month
+		a,
+		span
+			color #555555
+			font-weight normal
+	.ui-datepicker-unselectable
+		a,
+		span
+			color #CCCCCC
+			font-weight normal
+
+
+/** Styled Select Box **/
+.ui-select
+	position relative
+	display inline-block
+	width ($baseFormWidth * 0.7) /* 70% of form width, ineer elements have the padding and borders */
+	vertical-align middle
+	a.ui-select-single
+		position relative
+		padding 5px
+		display block
+		color $inputFontColor
+		border 1px solid $baseBorderColor
+		background-color $inputBackground
+		text-decoration none
+		&::after
+			content ""
+			position absolute
+			top 0
+			right 0
+			width 24px
+			height 28px
+			background url("/images/framework/select-sprite.png") -3px 50% no-repeat $buttonColor
+			border-left 1px solid $baseBorderColor
+	.ui-select-dropdown
+		display none
+		position absolute
+		top 29px
+		left 0
+		background-color #FFF
+		border 1px solid $baseBorderColor
+		z-index 1
+	.ui-select-search
+		padding 10px
+		input
+			padding-left 25px
+			width ($baseFormWidth * 0.7) - 54 /* ( 70% of form width ) - horizontal margin, padding and border */
+			background url("/images/framework/select-sprite.png") -60px 50% no-repeat
+	.ui-select-options
+		overflow auto
+		max-height 230px
+		margin 0
+		padding 0
+		list-style none
+		li
+			margin 1px
+			padding 3px 8px
+			list-style none
+			border 1px solid transparent
+			&:hover
+				cursor pointer
+				text-shadow 0px 1px 1px darken($primaryColor, 6)
+				background-color $primaryColor
+				border 1px solid darken($primaryColor, 6)
+				box-shadow 0px 0px 0px 1px lighten($primaryColor, 5) inset
+				if dark($primaryColor)
+					color #FFFFFF /* TODO - move to variable */
+				else
+					color #333333 /* TODO - move to variable */
+
+
+
+
+
+
+/** TODO - Unsorted Styles **/
+label.checkbox,
+label.radio
+	strong
+		width 500px
+		vertical-align top
+		margin-right 0
+	input
+		width auto
+		position relative
+		vertical-align middle
+		*vertical-align top
+		_vertical-align top
+		top -1px
+		padding 0
+		margin 0 10px 0 0
+		border none
+		background-color transparent

@@ -1,0 +1,132 @@
+body{height:100%;background:#fff;margin:0;padding:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body,dl,dt,dd,ul,ol,pre,code,form,fieldset,legend,input,button,textarea,blockquote,th,td{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6,p,pre,dt,li,hr,address,table,label{margin:0 0 18px;padding:0}
+body,input,button,textarea,select{font:normal normal 13px/18px "Helvetica Neue",Helvetica,Arial,sans-serif;color:#666}
+h1,h2,h3,h4,h5,h6{font:normal bold 30px/36px "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+h1{margin-bottom:36px}
+h2{font-size:24px}
+h3{font-size:18px}
+h4{font-size:16px}
+h5{font-size:14px}
+h6{font-size:13px}
+fieldset,img{border:0}
+img,object{vertical-align:bottom}
+ol li{list-style-type:decimal}
+ul li{list-style-type:disc}
+ul ul li{list-style-type:circle}
+ol ol li{list-style-type:lower-alpha}
+strong,em{color:#4d4d4d}
+a{color:#47a9a4;text-decoration:underline;}
+a:hover,a:focus{color:#388581;text-decoration:none}
+a:active{outline:none}
+sub{vertical-align:sub;font-size:smaller}
+sup{vertical-align:super;font-size:smaller}
+legend{color:#000;padding-bottom:.5em}
+table{border-collapse:collapse;border-spacing:0}
+caption{position:absolute;left:-999em}
+th{text-align:center}
+tbody th{text-align:left}
+code{color:#06f}
+code,pre{font-size:small}
+blockquote,q,em,cite,dfn,i,cite,var,address{font-style:italic}
+blockquote p:before,blockquote p:after,q:before,q:after{content:''}
+th,strong,dt,b{font-weight:bold}
+ins{text-decoration:none;border-bottom:3px double #333}
+del{text-decoration:line-through}
+abbr,acronym{border-bottom:1px dotted #333;font-variant:normal}
+dt{margin-bottom:4px}
+dd{padding-left:0;margin-bottom:20px}
+li{margin-left:20px}
+hr{margin-right:30px;margin-left:30px;border-style:inset;border-width:1px}
+label{padding-top:1.2em}
+input[type="checkbox"]{vertical-align:bottom;*vertical-align:baseline}
+input[type="radio"]{vertical-align:text-bottom}
+input{_vertical-align:text-bottom}
+input,button,textarea,select,optgroup,option{font-size:13px}
+button,input[type="submit"],input[type="reset"],input[type="button"],.inputButton{*overflow:visible;_width:0}
+body{background-color:#f7f7f7;padding:20px}
+#page{position:relative;width:880px;margin:0 auto}
+#main-header{width:240px;position:fixed;top:20px;}
+#main-header h1{margin-bottom:30px;}
+#main-header h1 a{display:block;border-bottom:2px solid #bbb;padding-bottom:5px;color:#000;text-decoration:none;}
+#main-header h1 a:hover{border-bottom-color:#000}
+#main-nav ul{margin:0;padding:0;list-style:none}
+#main-nav li{margin:0;padding:0;list-style:none}
+#main-nav a{font-weight:bold;text-transform:uppercase;text-decoration:none;}
+#main-nav a:hover{color:#666}
+#main-content,#main-footer{width:600px;margin-left:280px}
+#main-content section{padding-bottom:20px}
+#main-content section h1:first-child{border-bottom:2px solid #bbb;padding-bottom:5px;margin-bottom:30px;font-weight:normal}
+#main-footer{padding:80px 0 20px;text-align:center}
+form{width:600px}
+fieldset{padding-bottom:18px;border-bottom:1px solid #ccc;margin-bottom:18px}
+label{display:block;color:#333;}
+label span{display:inline-block;width:160px;vertical-align:middle;margin-right:20px;line-height:30px;}
+label span abbr /* Indicates required files */{color:#d24d4d;margin-left:6px;border:0}
+input,select,textarea{display:inline-block;width:408px;vertical-align:middle;padding:5px;color:#333;border:1px solid #ccc;background-color:#fff;outline:0;-webkit-transition:border .1s ease,box-shadow .1s ease;-moz-transition:border .1s ease,box-shadow .1s ease;-ms-transition:border .1s ease,box-shadow .1s ease;-o-transition:border .1s ease,box-shadow .1s ease;transition:border .1s ease,box-shadow .1s ease;}
+input:hover,select:hover,textarea:hover{border-color:#b3b3b3}
+input:active,select:active,textarea:active,input:focus,select:focus,textarea:focus{border-color:#47a9a4;-webkit-box-shadow:0 1px 5px rgba(0,0,0,0.20) inset,0 0 5px rgba(71,169,164,0.80);-moz-box-shadow:0 1px 5px rgba(0,0,0,0.20) inset,0 0 5px rgba(71,169,164,0.80);-ms-box-shadow:0 1px 5px rgba(0,0,0,0.20) inset,0 0 5px rgba(71,169,164,0.80);-o-box-shadow:0 1px 5px rgba(0,0,0,0.20) inset,0 0 5px rgba(71,169,164,0.80);box-shadow:0 1px 5px rgba(0,0,0,0.20) inset,0 0 5px rgba(71,169,164,0.80)}
+select{width:420px;}
+textarea{height:100px;vertical-align:top;resize:vertical;overflow:auto;}
+fieldset.actions{display:block;width:600px;text-align:right;}
+fieldset.actions input{margin-left:20px}
+input.button{position:relative;display:inline-block;width:auto;padding:5px 16px;font-weight:bold;background-color:#eee;border:1px solid #cacaca;outline:0;cursor:pointer;-webkit-box-shadow:none;-moz-box-shadow:none;-ms-box-shadow:none;-o-box-shadow:none;box-shadow:none;color:#999;-webkit-transition:border .1s ease,background-color .1s ease;-moz-transition:border .1s ease,background-color .1s ease;-ms-transition:border .1s ease,background-color .1s ease;-o-transition:border .1s ease,background-color .1s ease;transition:border .1s ease,background-color .1s ease;}
+input.button:hover{background-color:#f6f6f6}
+input.button:active,input.button:focus{top:1px;background-color:#e6e6e6}
+input.button.primary{text-shadow:0 1px 1px #3e938f;background-color:#47a9a4;border:1px solid #3e938f;-webkit-box-shadow:0 0 0 1px #53b7b2 inset;-moz-box-shadow:0 0 0 1px #53b7b2 inset;-ms-box-shadow:0 0 0 1px #53b7b2 inset;-o-box-shadow:0 0 0 1px #53b7b2 inset;box-shadow:0 0 0 1px #53b7b2 inset;color:#fff;}
+input.button.primary:hover{background-color:#4cb4ae}
+input.button.primary:active,input.button.primary:focus{background-color:#429e9a}
+input.datepicker{position:relative;}
+#ui-datepicker-div{position:absolute;left:-9999px;background-color:#fff;padding:10px;margin-top:10px;border:1px solid #b3b3b3;-webkit-box-shadow:0 2px 8px -4px rgba(0,0,0,0.50);-moz-box-shadow:0 2px 8px -4px rgba(0,0,0,0.50);-ms-box-shadow:0 2px 8px -4px rgba(0,0,0,0.50);-o-box-shadow:0 2px 8px -4px rgba(0,0,0,0.50);box-shadow:0 2px 8px -4px rgba(0,0,0,0.50);}
+#ui-datepicker-div::before{content:"";position:absolute;top:-12px;left:10px;width:25px;height:12px;background:url("/images/framework/datepicker-sprite.png") 0 -61px no-repeat}
+#ui-datepicker-div .ui-datepicker-title{padding-bottom:6px;border-bottom:1px solid #ccc;margin-bottom:5px;font-weight:bold;color:#333;}
+#ui-datepicker-div .ui-datepicker-next,#ui-datepicker-div .ui-datepicker-prev{position:absolute;top:14px;right:10px;display:block;width:12px;height:12px;margin-left:5px;margin-bottom:0;overflow:hidden;text-indent:-9999px;background:url("/images/content/button-sprite.png") -160px -94px no-repeat #47a9a4;}
+#ui-datepicker-div .ui-datepicker-next:hover,#ui-datepicker-div .ui-datepicker-prev:hover{background-position:-160px -110px}
+#ui-datepicker-div .ui-datepicker-prev{right:24px;background-position:-144px -94px;}
+#ui-datepicker-div .ui-datepicker-prev:hover{background-position:-144px -110px}
+#ui-datepicker-div table{width:auto;margin-bottom:0;margin-right:1px;}
+#ui-datepicker-div th,#ui-datepicker-div td{padding:0}
+#ui-datepicker-div th{font-size:10px;text-transform:uppercase;border:none}
+#ui-datepicker-div td{border:1px solid #ccc;text-align:center;}
+#ui-datepicker-div td a,#ui-datepicker-div td span{display:block;width:30px;height:30px;line-height:30px;text-decoration:none;font-weight:bold;color:#333;}
+#ui-datepicker-div td a:hover,#ui-datepicker-div td a:active,#ui-datepicker-div td a:focus{background-color:#47a9a4;color:#fff}
+#ui-datepicker-div td span{cursor:default}
+#ui-datepicker-div .ui-datepicker-today a{font-weight:bold;background-color:#f7f7f7;-webkit-box-shadow:0 1px 4px rgba(0,0,0,0.20) inset;-moz-box-shadow:0 1px 4px rgba(0,0,0,0.20) inset;-ms-box-shadow:0 1px 4px rgba(0,0,0,0.20) inset;-o-box-shadow:0 1px 4px rgba(0,0,0,0.20) inset;box-shadow:0 1px 4px rgba(0,0,0,0.20) inset}
+#ui-datepicker-div .ui-datepicker-current-day a,#ui-datepicker-div .ui-datepicker-current-day span{background:url("/images/framework/datepicker-sprite.png") 0 0 no-repeat #47a9a4;}
+#ui-datepicker-div .ui-datepicker-current-day a:hover,#ui-datepicker-div .ui-datepicker-current-day span:hover{background-image:none}
+#ui-datepicker-div .ui-datepicker-other-month a,#ui-datepicker-div .ui-datepicker-other-month span{color:#555;font-weight:normal}
+#ui-datepicker-div .ui-datepicker-unselectable a,#ui-datepicker-div .ui-datepicker-unselectable span{color:#ccc;font-weight:normal}
+.ui-select{position:relative;display:inline-block;width:420px;vertical-align:middle;}
+.ui-select a.ui-select-single{position:relative;padding:5px;display:block;color:#333;border:1px solid #ccc;background-color:#fff;text-decoration:none;}
+.ui-select a.ui-select-single::after{content:"";position:absolute;top:0;right:0;width:24px;height:28px;background:url("/images/framework/select-sprite.png") -3px 50% no-repeat #eee;border-left:1px solid #ccc}
+.ui-select .ui-select-dropdown{display:none;position:absolute;top:29px;left:0;background-color:#fff;border:1px solid #ccc;z-index:1}
+.ui-select .ui-select-search{padding:10px;}
+.ui-select .ui-select-search input{padding-left:25px;width:366px;background:url("/images/framework/select-sprite.png") -60px 50% no-repeat}
+.ui-select .ui-select-options{overflow:auto;max-height:230px;margin:0;padding:0;list-style:none;}
+.ui-select .ui-select-options li{margin:1px;padding:3px 8px;list-style:none;border:1px solid transparent;}
+.ui-select .ui-select-options li:hover{cursor:pointer;text-shadow:0 1px 1px #3e938f;background-color:#47a9a4;border:1px solid #3e938f;-webkit-box-shadow:0 0 0 1px #53b7b2 inset;-moz-box-shadow:0 0 0 1px #53b7b2 inset;-ms-box-shadow:0 0 0 1px #53b7b2 inset;-o-box-shadow:0 0 0 1px #53b7b2 inset;box-shadow:0 0 0 1px #53b7b2 inset;color:#fff;}
+label.checkbox strong,label.radio strong{width:500px;vertical-align:top;margin-right:0}
+label.checkbox input,label.radio input{width:auto;position:relative;vertical-align:middle;*vertical-align:top;_vertical-align:top;top:-1px;padding:0;margin:0 10px 0 0;border:none;background-color:transparent}
+table{width:600px;}
+table th,table td{padding:8px}
+table th{text-align:left;font-weight:bold;border-bottom:2px solid #666;color:#555;}
+table td{border-bottom:1px solid #999}
+table.highlight tbody tr:hover{background-color:#d1ebea}
+table.sortable th a{padding-right:14px;text-decoration:none;color:#333;background:url("/images/framework/table-sortable.png") 100% 40px no-repeat;}
+table.sortable th a:hover{color:#000}
+table.sortable th.sort-asc a{background-position:100% 7px;}
+table.sortable th.sort-asc a:hover{background-position:100% -33px}
+table.sortable th.sort-desc a{background-position:100% -73px;}
+table.sortable th.sort-desc a:hover{background-position:100% -113px}
+#page-notification{position:fixed;width:100%;top:0;left:0;z-index:10;}
+#page-notification .notification{display:none;text-align:center;opacity:.95;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=95)}
+.notification{position:relative;background-color:#eee;border:1px solid #cacaca;text-shadow:0 1px 1px #cacaca;padding:10px 14px;margin-bottom:18px;font-weight:bold;color:#333;}
+.notification.success{background-color:#47a967;border:1px solid #327748;text-shadow:0 1px 1px #327748;color:#fff}
+.notification.notice{background-color:#4791a9;border:1px solid #326677;text-shadow:0 1px 1px #326677;color:#fff}
+.notification.warning{background-color:#f0b034;border:1px solid #cd8d0f;text-shadow:0 1px 1px #cd8d0f;color:#333}
+.notification.error{background-color:#d24d4d;border:1px solid #ac2c2c;text-shadow:0 1px 1px #ac2c2c;color:#fff}
+.notification p{margin:0}
+.notification .close{position:absolute;right:14px;top:14px;display:block;width:10px;height:11px;text-indent:-9999px;overflow:hidden;background:url("/images/framework/notification-sprite.png") 0 0 no-repeat;}
+.notification .close:hover{background-position:0 -11px}
+.notification .close:active{background-position:0 -22px}

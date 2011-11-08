@@ -1,0 +1,61 @@
+/*
+ * Styles which are common to all pages
+ */
+
+body
+	background-color #F7F7F7
+	padding 20px
+
+#page
+	position relative
+	width 880px
+	margin 0 auto
+
+#main-header
+	width 240px
+	position fixed
+	top 20px
+	h1
+		margin-bottom 30px
+		a
+			display block
+			border-bottom 2px solid #BBBBBB
+			padding-bottom 5px
+			color #000000
+			text-decoration none
+			&:hover
+				border-bottom-color #000000
+
+#main-nav
+	ul
+		margin 0
+		padding 0
+		list-style none
+	li
+		margin 0
+		padding 0
+		list-style none
+	a
+		font-weight bold
+		text-transform uppercase
+		text-decoration none
+		&:hover
+			color $baseFontColor
+
+#main-content,
+#main-footer
+	width 600px
+	margin-left 280px
+
+#main-content
+	section
+		padding-bottom 20px
+	section h1:first-child
+		border-bottom 2px solid #BBBBBB
+		padding-bottom 5px
+		margin-bottom 30px
+		font-weight normal
+
+#main-footer
+	padding 80px 0 20px
+	text-align center

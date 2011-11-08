@@ -1,0 +1,39 @@
+!!! 5
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		//- SITE INFORMATION
+		title=page.title
+
+		meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0;")
+
+
+		//- CSS
+		link(rel='stylesheet', type='text/css', href='/css/main/index.css', media='all')
+		- if(typeof cssSrc !== 'undefined')
+			!= partial('partials/structure/css', cssSrc)
+
+		//- Add .js class to <html> if javascript is available
+		script
+			document.getElementsByTagName('html')[0].setAttribute('class', 'js');
+
+	body(class=page.section)
+		#page
+			!= partial('partials/structure/header')
+			#main-content
+				!= body
+			!= partial('partials/structure/footer')
+
+		//- End of body Javascript
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js')
+		script
+			if (typeof jQuery === 'undefined') {
+				document.write('<script src="/js/jquery-1.6.2.min.js" />');
+			}
+		script(src='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js')
+		script
+			if (typeof jQuery.ui === 'undefined') {
+				document.write('<script src="/js/jquery-ui-1.8.14.min.js" />');
+			}
+		script(src='/js/chosen/chosen.jquery.js')
+		script(src='/js/mainspring.js')

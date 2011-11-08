@@ -1,0 +1,26 @@
+section#notifications
+	h1 Notifications
+	#page-notification
+		.notification
+			p All notifications have been closed. Would you like to reset them? 
+				a.reset(href='#notifications') Yes
+				|  | 
+				a.cancel(href='#') No
+				
+				
+			a.close(href='#') Close
+	.notification
+		p Default Message
+		a.close(href='#') Close
+	.notification.success
+		p Success Message
+		a.close(href='#') Close
+	.notification.notice
+		p Notice Message
+		a.close(href='#') Close
+	.notification.warning
+		p Warning Message
+		a.close(href='#') Close
+	.notification.error
+		p.Error Message
+		a.close(href='#') Close

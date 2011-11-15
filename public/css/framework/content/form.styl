@@ -17,16 +17,16 @@ label
 	color $labelFontColor
 	margin-bottom 2px
 
-	span
+	& > span
 		display inline-block
 		width ($baseFormWidth * 0.3) - @margin-right /* ( 30% of form width ) - horizontal margin */
-		vertical-align middle
+		vertical-align top
 		margin-right 20px
-		line-height 30px /* TODO - line-height must match input height to line up texarea span corrctly */
+		padding-top 6px /* TODO padding must match input padding and border height to line up span corrctly */
 
 		abbr /* Indicates required files */
 			color $errorColor
-			margin-left 6px
+			margin-left 4px
 			border 0
 
 input,
@@ -34,7 +34,7 @@ select
 textarea
 	display inline-block
 	width ($baseFormWidth * 0.7) - 12 /* ( 70% of form width ) - horizontal margin, padding and border */
-	vertical-align middle
+	vertical-align top
 	padding 5px
 	color $inputFontColor
 	border 1px solid $baseBorderColor
@@ -54,6 +54,7 @@ textarea
 		box-shadow 0px 1px 5px rgba(0,0,0,.2) inset, 0px 0px 5px rgba($primaryColor, 0.8)
 
 select
+	height 30px
 	width ($baseFormWidth * 0.7) /* 70% of form width (margin, padding and border not needed in this calculation) */
 
 textarea
@@ -118,10 +119,13 @@ input.button.primary
 		margin-left ($baseFormWidth * 0.3)
 		font-size 11px
 		color #999
+		if $baseTransitionDuration != 0
+			transition color $baseTransitionDuration $baseTransitionEasing
 		p,ul,li
 			margin-bottom 0
-		&:hover
-			color #555
+	&:hover .description
+		color #555
+
 
 /*
  * Advanced Controls
@@ -235,67 +239,6 @@ input.datepicker
 		span
 			color #CCCCCC
 			font-weight normal
-
-
-/** Styled Select Box **/
-.ui-select
-	position relative
-	display inline-block
-	width ($baseFormWidth * 0.7) /* 70% of form width, ineer elements have the padding and borders */
-	vertical-align middle
-	a.ui-select-single
-		position relative
-		padding 5px
-		display block
-		color $inputFontColor
-		border 1px solid $baseBorderColor
-		background-color $inputBackground
-		text-decoration none
-		&::after
-			content ""
-			position absolute
-			top 0
-			right 0
-			width 24px
-			height 28px
-			background url("/images/framework/select-sprite.png") -3px 50% no-repeat $buttonColor
-			border-left 1px solid $baseBorderColor
-	.ui-select-dropdown
-		display none
-		position absolute
-		top 29px
-		left 0
-		background-color #FFF
-		border 1px solid $baseBorderColor
-		z-index 1
-	.ui-select-search
-		padding 10px
-		input
-			padding-left 25px
-			width ($baseFormWidth * 0.7) - 54 /* ( 70% of form width ) - horizontal margin, padding and border */
-			background url("/images/framework/select-sprite.png") -60px 50% no-repeat
-	.ui-select-options
-		overflow auto
-		max-height 230px
-		margin 0
-		padding 0
-		list-style none
-		li
-			margin 1px
-			padding 3px 8px
-			list-style none
-			border 1px solid transparent
-			&:hover
-				cursor pointer
-				text-shadow 0px 1px 1px darken($primaryColor, 6)
-				background-color $primaryColor
-				border 1px solid darken($primaryColor, 6)
-				box-shadow 0px 0px 0px 1px lighten($primaryColor, 5) inset
-				if dark($primaryColor)
-					color #FFFFFF /* TODO - move to variable */
-				else
-					color #333333 /* TODO - move to variable */
-
 
 
 

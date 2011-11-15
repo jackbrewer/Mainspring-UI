@@ -8,13 +8,14 @@ body
 
 #page
 	position relative
-	width 880px
+	width 910px
 	margin 0 auto
 
 #main-header
-	width 240px
+	width 210px
 	position fixed
 	top 20px
+	left auto
 	h1
 		margin-bottom 30px
 		a
@@ -28,7 +29,7 @@ body
 
 #main-nav
 	ul
-		margin 0
+		margin 0 0 18px 0
 		padding 0
 		list-style none
 	li
@@ -44,12 +45,14 @@ body
 
 #main-content,
 #main-footer
-	width 600px
-	margin-left 280px
+	width 660px
+	margin-left 250px
 
 #main-content
 	section
-		padding-bottom 20px
+		padding-top 20px
+		&:first-child
+			padding-top 0
 	section h1:first-child
 		border-bottom 2px solid #BBBBBB
 		padding-bottom 5px

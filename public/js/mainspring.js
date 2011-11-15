@@ -12,7 +12,8 @@ $(document).ready(function() {
 
 	/** Chosen Select Boxes **/
 	$(".chzn-select").chosen({
-		allow_single_deselect: true
+		allow_single_deselect: true,
+		disable_search_threshold: 10
 	});
 
 	/** Styled Select Box **/

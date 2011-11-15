@@ -7,7 +7,6 @@ html(lang="en")
 
 		meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0;")
 
-
 		//- CSS
 		link(rel='stylesheet', type='text/css', href='/css/main/index.css', media='all')
 		- if(typeof cssSrc !== 'undefined')
@@ -16,6 +15,17 @@ html(lang="en")
 		//- Add .js class to <html> if javascript is available
 		script
 			document.getElementsByTagName('html')[0].setAttribute('class', 'js');
+
+		//lt IE 9
+		script
+			/** TODO - Temporary HTML5 IE* fix **/
+			document.createElement('header');
+			document.createElement('nav');
+			document.createElement('section');
+			document.createElement('article');
+			document.createElement('aside');
+			document.createElement('footer');
+			document.createElement('hgroup');
 
 	body(class=page.section)
 		#page

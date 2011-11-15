@@ -47,5 +47,43 @@ app.get('/fluid', function(req, res){
   });
 });
 
+app.get('/admin/user', function(req, res){
+  res.render('pages/admin/user/list', {
+    page: {
+      title: 'CMS List Page | Mainspring UI',
+      section: 'user'
+    },
+    cssSrc: ['/css/framework/cms-specific.css']
+  });
+});
+app.get('/admin/user/add', function(req, res){
+  res.render('pages/admin/user/form', {
+    page: {
+      title: 'CMS Add Page | Mainspring UI',
+      section: 'user'
+    },
+    cssSrc: ['/css/framework/cms-specific.css']
+  });
+});
+app.get('/admin/user/:id', function(req, res){
+  res.render('pages/admin/user/view', {
+    page: {
+      title: 'CMS View Page | Mainspring UI',
+      section: 'user'
+    },
+    cssSrc: ['/css/framework/cms-specific.css']
+  });
+});
+app.get('/admin/user/:id/edit', function(req, res){
+  res.render('pages/admin/user/form', {
+    page: {
+      title: 'CMS Edit Page | Mainspring UI',
+      section: 'user'
+    },
+    cssSrc: ['/css/framework/cms-specific.css']
+  });
+});
+
+
 app.listen(3111);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

@@ -2,6 +2,7 @@
 public/css/*.css
 public/css/main/*.css
 public/css/admin/*.css
+public/css/framework/*.css
 /.monitor
 
 # Eclipse

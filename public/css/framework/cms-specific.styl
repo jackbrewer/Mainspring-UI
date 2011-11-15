@@ -1,0 +1,38 @@
+@import './variables'
+@import './mixins'
+
+.breadcrumb
+	margin-bottom 18px
+	li
+		display inline
+		&::before
+			content " / "
+		&:first-child::before
+			content ""
+
+tr
+	.row-actions,
+	.row-actions-block
+		display inline
+		margin-top 4px
+		margin-left 20px
+		padding 0
+		font-size 12px
+		opacity 0
+		if $baseTransitionDuration != 0
+			transition opacity $baseTransitionDuration $baseTransitionEasing
+		li
+			margin 0 10px 0 0
+			padding 0
+			list-style none
+			display inline
+			a
+				color #555
+	.row-actions-block
+		display block
+		margin-left 0
+
+tr:hover
+	.row-actions,
+	.row-actions-block
+		opacity 1

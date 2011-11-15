@@ -1,0 +1,35 @@
+section
+	h1 User Details
+	nav.breadcrumb
+		ul
+			li: a(href='/admin') Home
+			li: a(href='/admin/user') Users
+			li User Details
+
+	#controls.panel
+		ul#actions
+			#actions-primary
+				li: a.button(href='/admin/user/0001/edit') Edit this User
+				li: a.button.delete(href='/admin/user/0001/delete') Delete this User
+			#actions-secondary
+				li: a.button(href='/admin/user/add') Add a new User
+				li: a.button(href='/admin/user') View all Users
+
+	h2 User Details
+	p Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget.
+	dl
+		dt User ID
+		dd 0001
+		dt Name
+		dd Jack Brewer
+		dt Email Address
+		dd jack@jackbrewer.co.uk
+
+	h2 Account Settings
+	dl
+		dt User Role
+		dd Administrator
+		dt User Enabled
+		dd Enabled
+		dt Account Created
+		dd 14th June 2011

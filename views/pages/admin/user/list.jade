@@ -1,0 +1,66 @@
+section
+	h1 Users
+	nav.breadcrumb
+		ul
+			li: a(href='/admin') Home
+			li Users
+
+	//- Actions and Filter Controls
+	#controls.panel
+		#search 
+			form(method='get', action='#')
+				label
+					strong Filter Results
+						input(value='', name='Filter')
+				input.button(type='submit',value='Filter')
+				a.button(href='') Reset
+		ul#actions
+			li: a.button(href='/admin/user/add') Add
+
+		table.highlight
+			thead
+				tr
+					th ID
+					th Name
+					th Email Address
+					th User Role
+					th Account Enabled
+			tbody
+				tr
+					td 0001
+					//- Title Row
+					td.title
+						strong: a(href='/admin/user/0001/') Jack Brewer
+						ul.row-actions
+							li: a(href='/admin/user/0001/edit') Edit
+							li: a(href='/admin/user/0001/delete').delete Delete
+					td
+						a(href='mailto:jack@jackbrewer.co.uk') jack@jackbrewer.co.uk
+					td Administrator
+					td Enabled
+				
+				//- Repeated
+				tr
+					td 0001
+					//- Title Row
+					td.title
+						strong: a(href='/admin/user/0001/') Jack Brewer
+						ul.row-actions
+							li: a(href='/admin/user/0001/edit') Edit
+							li: a(href='/admin/user/0001/delete').delete Delete
+					td
+						a(href='mailto:jack@jackbrewer.co.uk') jack@jackbrewer.co.uk
+					td Administrator
+					td Enabled
+				tr
+					td 0001
+					//- Title Row
+					td.title
+						strong: a(href='/admin/user/0001/') Jack Brewer
+						ul.row-actions
+							li: a(href='/admin/user/0001/edit') Edit
+							li: a(href='/admin/user/0001/delete').delete Delete
+					td
+						a(href='mailto:jack@jackbrewer.co.uk') jack@jackbrewer.co.uk
+					td Administrator
+					td Enabled

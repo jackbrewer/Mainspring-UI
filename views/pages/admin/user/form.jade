@@ -1,0 +1,53 @@
+section
+	h1 Add / Edit a User
+	nav.breadcrumb
+		ul
+			li: a(href='/admin') Home
+			li: a(href='/admin/user') Users
+			li: Edit User Details
+
+form(action="#",id="form-name")
+
+	fieldset
+		h2 User Details
+		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
+		.form-field
+			label
+				span Name
+				input(type='text')
+		.form-field
+			label
+				span Email
+				input(type='email',placeholder='email@example.com')
+
+	fieldset
+		h2 Account Settings
+		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
+		.form-field
+			label
+				span Password
+				input(type='password')
+				.description
+					p A secure password should contain at least one number and special character.
+		.form-field
+			label
+				span User Role
+				select.chzn-select
+					option(value='') 
+					option(value='') Administrator
+					option(value='') Content Editor
+					option(value='') Moderator
+					option(value='') User
+			.description
+				p A more detailed description of what is required
+				ul
+					li Detailed instruction 1
+					li Detailed instruction 2
+		.form-field
+			label.checkbox
+				span User Enabled
+				input(type='checkbox')
+
+	fieldset.actions
+		input.button.primary(type='submit',value='Submit')
+		input.button(type='reset',value='Clear')

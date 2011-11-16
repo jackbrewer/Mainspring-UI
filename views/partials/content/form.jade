@@ -71,6 +71,53 @@ section#forms
 					span Date Input
 					input(class='datepicker',type='text')
 
+			.form-field
+				label.checkbox
+					span Single Checkbox
+					input(type='checkbox')
+
+			.form-field.field-group
+				.label
+					span Multiple Checkboxes
+				ul
+					li
+						label
+							input(type='checkbox',checked)
+							span Option 1
+					li
+						label
+							input(type='checkbox')
+							span Option 2
+					li
+						label
+							input(type='checkbox')
+							span Option 3
+					li
+						label
+							input(type='checkbox')
+							span Option 4
+
+			.form-field.field-group
+				.label
+					span Radio Buttons
+				ul
+					li
+						label
+							input(type='radio',name='radio',checked)
+							span Option 1
+					li
+						label
+							input(type='radio',name='radio')
+							span Option 2
+					li
+						label
+							input(type='radio',name='radio')
+							span Option 3
+					li
+						label
+							input(type='radio',name='radio')
+							span Option 4
+
 		fieldset.actions
 			input.button.primary(type='submit',value='Submit')
 			input.button(type='reset',value='Clear')

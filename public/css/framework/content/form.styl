@@ -12,7 +12,9 @@ fieldset
 
 .form-field
 	margin-bottom 18px
-label
+
+label,
+.label
 	display block
 	color $labelFontColor
 	margin-bottom 2px
@@ -29,6 +31,11 @@ label
 			margin-left 4px
 			border 0
 
+.label
+	display inline-block
+	width ($baseFormWidth * 0.3) - @margin-right /* ( 30% of form width ) - horizontal margin */
+	margin-right 20px
+
 input,
 select
 textarea
@@ -40,12 +47,10 @@ textarea
 	border 1px solid $baseBorderColor
 	background-color $inputBackground
 	outline 0 /* Be sure to set a focus style if using this */
-
 	if $baseBorderRadius != 0
 		border-radius $baseBorderRadius
 	if $baseTransitionDuration != 0
 		transition border $baseTransitionDuration $baseTransitionEasing, box-shadow $baseTransitionDuration $baseTransitionEasing
-
 	&:hover
 		border-color darken($baseBorderColor, 10)
 	&:active,
@@ -63,6 +68,40 @@ textarea
 	resize vertical
 	overflow auto /* Hides scrollber in IE when not needed*/
 
+.checkbox > span,
+.radio > span,
+.field-group label > span,
+.field-group .label > span
+	padding-top 1px
+
+.field-group label > span
+	width 443px /* TODO - Bad! shouldn't be hard coded */
+	margin-right 0
+
+.checkbox,
+.radio,
+.field-group
+	input
+		width auto
+		vertical-align middle
+		background none
+		border 0
+		margin-right 6px
+
+.field-group
+	.label
+		vertical-align top
+	ul
+		display inline-block
+		width ($baseFormWidth * 0.7)
+		list-style none
+		margin 0
+		padding 0
+	li
+		list-style none
+		margin 0
+		padding 0
+
 fieldset.actions
 	display block
 	width $baseFormWidth
@@ -70,6 +109,7 @@ fieldset.actions
 	input
 		margin-left 20px
 
+/** Buttons - TODO -refactor somewhere else **/
 input.button
 	position relative
 	display inline-block
@@ -239,26 +279,3 @@ input.datepicker
 		span
 			color #CCCCCC
 			font-weight normal
-
-
-
-
-
-/** TODO - Unsorted Styles **/
-label.checkbox,
-label.radio
-	strong
-		width 500px
-		vertical-align top
-		margin-right 0
-	input
-		width auto
-		position relative
-		vertical-align middle
-		*vertical-align top
-		_vertical-align top
-		top -1px
-		padding 0
-		margin 0 10px 0 0
-		border none
-		background-color transparent

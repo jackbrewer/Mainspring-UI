@@ -1,0 +1,75 @@
+// TODO - Set column width instead of spacing as a mixin
+
+// Variables
+$baseGridWidth = 940px
+$baseColSpacing = 20px
+
+// Mixin to calculate column widths
+setColumnWidths(colCount, gridWidth = $baseGridWidth, colSpacing = $baseColSpacing)
+	$colWidth = ( gridWidth - ( colSpacing * ( colCount - 1 ))) / colCount
+	.grid-{colCount}
+		[class*="col-"]
+			margin-left colSpacing
+		for i in 1..colCount
+			.col-{i}
+				width ( $colWidth * i ) + ( colSpacing * ( i - 1 ))
+
+/** Generic Grid Styles **/
+[class*="grid-"]
+	float left
+	width $baseGridWidth
+	margin-bottom 40px
+
+.row
+	float left
+	clear left
+	margin-bottom 20px
+	width 100%
+
+[class*="col-"]
+	float left
+	margin-left $baseColSpacing
+	text-align center
+	background #ccc
+	background rgba(0,0,0,.1)
+	border-radius 3px
+	line-height 32px
+	.row &:first-child
+		margin-left 0 !important
+	&:hover
+		background-color rgba(0,0,0,.2)
+
+.resize
+	[class*="grid-"]
+		width 100%
+		overflow auto
+		resize horizontal
+	.row
+		width 100%
+
+/* 4 Col */
+setColumnWidths(4, 500px, 60px)
+
+/* 12 Col */
+setColumnWidths(12)
+
+/* 16 Col */
+setColumnWidths(16)
+
+/* 12 Col Fluid*/
+.resize
+	setColumnWidths(12, 100%, 2%)
+
+/* Hide unrelated elements*/
+.grids
+	#page
+		width $baseGridWidth
+	#main-header
+		display none
+	#main-content
+	#main-footer
+		clear both
+		margin-left 0
+		width $baseGridWidth
+	section
+		clear left

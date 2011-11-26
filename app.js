@@ -47,6 +47,16 @@ app.get('/fluid', function(req, res){
   });
 });
 
+app.get('/grid', function(req, res){
+  res.render('pages/grid', {
+    page: {
+      title: 'Grid | Mainspring UI',
+      section: 'grids'
+    },
+    cssSrc: ['/css/framework/grid.css']
+  });
+});
+
 app.get('/admin/user', function(req, res){
   res.render('pages/admin/user/list', {
     page: {
